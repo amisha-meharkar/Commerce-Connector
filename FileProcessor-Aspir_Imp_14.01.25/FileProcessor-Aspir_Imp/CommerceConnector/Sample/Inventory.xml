@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Inventories>
+	<Inventory>
+		<Quantity></Quantity>
+		<ReOrderLevel>30</ReOrderLevel>
+		<SKU>z-2430001</SKU>
+		<WarehouseCode>Maxwellshardwarewarehouse</WarehouseCode>
+	</Inventory>
+</Inventories>
+

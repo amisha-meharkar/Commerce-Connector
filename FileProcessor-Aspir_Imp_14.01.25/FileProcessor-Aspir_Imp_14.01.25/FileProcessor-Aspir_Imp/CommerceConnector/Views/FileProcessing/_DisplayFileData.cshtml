@@ -1,0 +1,130 @@
+﻿@model Commerce_Connector_ViewModel.ViewModels.FileDataViewModel
+@{
+    Layout = null;  // Remove if using a layout
+}
+
+<style>
+    /* Simple table styling */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+    }
+
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f4f4f4;
+        }
+
+    /* General error message container */
+    .general-error {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .arrow {
+        font-size: 16px;
+        transform: rotate(90deg);
+        transition: transform 0.2s;
+    }
+
+        .arrow.open {
+            transform: rotate(270deg);
+        }
+
+    /* Detailed error message container */
+    .validation-errors {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+        padding: 10px;
+        margin-bottom: 20px;
+        display: none;
+    }
+
+    /* Wrapper for the table to add scrolling */
+    .table-container {
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+</style>
+
+@* Display general error message with a toggle arrow *@
+@if (Model.ErrorMessages.Any())
+{
+    <div class="general-error" onclick="toggleErrors()">
+        <span>The file is not suitable for processing. Click for details.</span>
+        <span class="arrow">&#x25B6;</span>
+    </div>
+
+    <div class="validation-errors">
+        <ul>
+            @foreach (var error in Model.ErrorMessages)
+            {
+                <li>@error</li>
+            }
+        </ul>
+    </div>
+}
+
+@* Display table with scrollable container if data is available *@
+@if (Model.Rows.Any())
+{
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    @foreach (var header in Model.Headers)
+                    {
+                        <th>@header</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in Model.Rows)
+                {
+                    <tr>
+                        @foreach (var header in Model.Headers)
+                        {
+                            <td>@row[header]</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>No data available.</p>
+}
+
+<script>
+    function toggleErrors() {
+        var errorContainer = document.querySelector('.validation-errors');
+        var arrow = document.querySelector('.arrow');
+        if (errorContainer.style.display === 'none' || errorContainer.style.display === '') {
+            errorContainer.style.display = 'block';
+            arrow.classList.add('open');
+        } else {
+            errorContainer.style.display = 'none';
+            arrow.classList.remove('open');
+        }
+    }
+</script>

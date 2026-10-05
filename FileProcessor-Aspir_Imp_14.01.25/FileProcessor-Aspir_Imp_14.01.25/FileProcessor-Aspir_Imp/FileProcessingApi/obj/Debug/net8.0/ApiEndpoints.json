@@ -1,0 +1,146 @@
+[
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "CreateOneTimeJob",
+    "RelativePath": "api/FileProcessing/CreateOneTimeJob",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobTime",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "CreateRecurringJob",
+    "RelativePath": "api/FileProcessing/CreateRecurringJob",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cronExpression",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "GetJobById",
+    "RelativePath": "api/FileProcessing/GetJobById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "GetJobDetails",
+    "RelativePath": "api/FileProcessing/GetJobDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "ImmidiateJob",
+    "RelativePath": "api/FileProcessing/ImmidiateJob",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "FileProcessingApi.Models.FileProcessingMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "ProcessFile",
+    "RelativePath": "api/FileProcessing/ProcessFile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "FileProcessingApi.Models.FileProcessingMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "SaveFileDetails",
+    "RelativePath": "api/FileProcessing/SaveFileDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "FileProcessingApi.Models.FileProcessingMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "SaveTemplateDetails",
+    "RelativePath": "api/FileProcessing/SaveTemplateDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "templateDetails",
+        "Type": "FileProcessingApi.Models.TemplateDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileProcessingApi.Controllers.FileProcessingController",
+    "Method": "UpdateJob",
+    "RelativePath": "api/FileProcessing/UpdateJob",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "FileProcessingApi.Models.FileProcessingMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

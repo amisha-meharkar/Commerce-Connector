@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.21.2" />
+    <PackageReference Include="CsvHelper" Version="33.0.1" />
+    <PackageReference Include="FluentFTP" Version="51.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SSH.NET" Version="2024.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Commerce_Connector_ViewModel\Commerce_Connector_ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Magick.NET-Q8-x64">
+      <HintPath>D:\znode10-api-migration\Znode.Multifront\Znode.Engine.Api\bin\Debug\net8.0\Magick.NET-Q8-x64.dll</HintPath>
+    </Reference>
+    <Reference Include="Magick.NET.Core">
+      <HintPath>D:\znode10-api-migration\Znode.Multifront\Znode.Engine.Api\bin\Debug\net8.0\Magick.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TransformTableData">
+      <HintPath>D:\TransformTableData\TransformTableData\TransformTableData\bin\Debug\net8.0\TransformTableData.dll</HintPath>
+    </Reference>
+    <Reference Include="Znode.Engine.Api.Models">
+      <HintPath>D:\znode10-api-migration\Znode.Multifront\Engines\Znode.Engine.Api.Models\bin\Debug\net8.0\Znode.Engine.Api.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Znode.Libraries.Abstract">
+      <HintPath>D:\znode10-api-migration\Znode.Multifront\CommercePortal\Znode.Engine.CommercePortal.Models\Znode.Libraries.Abstract.dll</HintPath>
+    </Reference>
+    <Reference Include="Znode.Libraries.Abstract.Helper">
+      <HintPath>D:\znode10-api-migration\Znode.Multifront\Znode.Engine.Api\bin\Debug\net8.0\Znode.Libraries.Abstract.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Znode.Libraries.Abstract.Models">
+      <HintPath>D:\znode10-api-migration\Znode.Multifront\Znode.Engine.Api\bin\Debug\net8.0\Znode.Libraries.Abstract.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Znode.Libraries.ECommerce.Utilities">
+      <HintPath>D:\znode10-api-migration\Znode.Multifront\Znode.Engine.Api\bin\Debug\net8.0\Znode.Libraries.ECommerce.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Znode.Libraries.Framework.Business">
+      <HintPath>D:\znode10-api-migration\Znode.Multifront\Znode.Engine.Api\bin\Debug\net8.0\Znode.Libraries.Framework.Business.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

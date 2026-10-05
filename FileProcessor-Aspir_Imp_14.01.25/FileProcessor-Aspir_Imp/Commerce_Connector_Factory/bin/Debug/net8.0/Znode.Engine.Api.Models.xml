@@ -1,0 +1,2655 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Znode.Engine.Api.Models</name>
+    </assembly>
+    <members>
+        <member name="P:Znode.Engine.Api.Models.CloudflarePurgeModel.Id">
+            <summary>
+            Property is used to pass categoryId or productId
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ContentPageParameterModel.Ids">
+            <summary>
+            This helps to pass in query parameter (Comma seperated string)
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.EmbeddedWidgetListModel">
+            <summary>
+            List response model for the EmbeddedWidget API
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetListModel.EmbeddedWidgetList">
+            <summary>
+            List of the embedded widgets.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.EmbeddedWidgetModel">
+            <summary>
+            Response model for the EmbeddedWidget API
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.IsUrl">
+            <summary>
+            Defines whether the response embedded widget is URL or Source.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.URL">
+            <summary>
+            URL to be loaded in the widget area.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.SourceCodeHTML">
+            <summary>
+            HTML source code of the loading widget.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.CMSWidgetId">
+            <summary>
+            ID of the CMS widget.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.CMSMappingId">
+            <summary>
+            ID of the CMS widget mapping.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.WidgetCode">
+            <summary>
+            Key of the widget.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.WidgetKey">
+            <summary>
+            Key of the widget.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.TypeOfMapping">
+            <summary>
+            Type of CMS Mapping.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.LocaleId">
+            <summary>
+            Locale ID of the widget locale.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EmbeddedWidgetModel.PortalId">
+            <summary>
+            Portal ID of the widget locale.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.GetAnyCategoryDetailModel">
+            <summary>
+            Get any category details model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.GetAnyCategoryDetailModel.PortalId">
+            <summary>
+            Portal Id
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.GetAnyCategoryDetailModel.PublishCatalogId">
+            <summary>
+            Publish Catalog Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.GetAnyCategoryDetailModel.AccountId">
+            <summary>
+            Account Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.GetAnyCategoryDetailModel.ProfileId">
+            <summary>
+            Profile Id.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.GetAnyProductDetailModel">
+            <summary>
+            Get any product details model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.GetAnyProductDetailModel.PortalId">
+            <summary>
+            Portal Id
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.GetAnyProductDetailModel.PublishCatalogId">
+            <summary>
+            Publish Catalog Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.GetAnyProductDetailModel.AccountId">
+            <summary>
+            Account Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.GetAnyProductDetailModel.ProfileId">
+            <summary>
+            Profile Id.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.PublishCategoryDetailModel">
+            <summary>
+            Publish Category Details Model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishCategoryDetailModel.SEODetailId">
+            <summary>
+            SEO Detail Id
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishCategoryDetailModel.SEOUrl">
+            <summary>
+            SEO Url
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishCategoryDetailModel.PublishedCategoryId">
+            <summary>
+            Publish Category Id
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishCategoryDetailModel.PimCategoryId">
+            <summary>
+            Pim Category Id
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.PublishProductDetailModel">
+            <summary>
+            Publish product details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductDetailModel.SEODetailId">
+            <summary>
+            SEO Detail Id
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductDetailModel.SEOUrl">
+            <summary>
+            SEO Url.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductDetailModel.PublishProductId">
+            <summary>
+            Publish Product Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductDetailModel.ProductName">
+            <summary>
+            Product Name.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.StoreExperienceAsideTabListModel">
+            <summary>
+            Store Experience Aside Tab List Model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.StoreExperienceAsideTabListModel.AsideTabs">
+            <summary>
+            Aside tabs list
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.StoreExperienceAsideTabModel">
+            <summary>
+            Store Experience Aside Tab Model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.StoreExperienceAsideTabModel.StoreExperienceAsideTabId">
+            <summary>
+            Store Experience AsideTabId
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.StoreExperienceAsideTabModel.ParentAsideTabId">
+            <summary>
+            Parent AsideTabId
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.StoreExperienceAsideTabModel.AsideTabCode">
+            <summary>
+            Aside Tab Code
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.StoreExperienceAsideTabModel.AsideTabDisplayName">
+            <summary>
+            Aside Tab Display Name
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.StoreExperienceAsideTabModel.ChildTabs">
+            <summary>
+            Child Tab List
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.StoreExperienceAsideTabModel.Sequence">
+            <summary>
+            Sequence
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.StoreExperienceAsideTabModel.RedirectUri">
+            <summary>
+            Redirect Uri
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.PublishThemeModel">
+            <summary>
+            Publish Theme Model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishThemeModel.PublishThemeEntityId">
+            <summary>
+            Publish theme entity Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishThemeModel.Output">
+            <summary>
+            Output
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishThemeModel.PublishStateId">
+            <summary>
+            Publish state Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishThemeModel.CMSThemeId">
+            <summary>
+            CMS theme Id.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.ThemeTrueFalseResponse">
+            <summary>
+            Theme true false response.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ThemeTrueFalseResponse.ErrorDetail">
+            <summary>
+            Error Detail
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ThemeTrueFalseResponse.IsSuccess">
+            <summary>
+            IsSuccess
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ThemeModel.PublishStatus">
+            <summary>
+            Publish state Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AssociateWidgetProductSkuListModel.AssociateProductSKUsList">
+            <summary>
+             An List of string representing the list of the associate product sku.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AssociateWidgetProductSkuListModel.InvalidSKUMessage">
+            <summary>
+             An List of string representing the list of the associate product sku.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ContentDetailsModel.ContentType">
+            <summary>
+            Content type of the request.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ContentDetailsModel.ContentLength">
+            <summary>
+            Required length for the content.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ContentModel.ContentType">
+            <summary>
+            Content Type of the response.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ContentModel.Content">
+            <summary>
+            Actual content Of the response.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.MultiRequestContentModel.ContentFor">
+            <summary>
+            Refers to what is the content needed for.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.MultiRequestContentModel.PrimaryContext">
+            <summary>
+            The primary context of the request.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.MultiRequestContentModel.ContentDetails">
+            <summary>
+            List of content details required.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.MultiRequestContentModel.ExtraContext">
+            <summary>
+            Extra context provided so that the AI can give more specialized response.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.SingleRequestContentModel.ContentFor">
+            <summary>
+            Refers to what is the content needed for.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.SingleRequestContentModel.ContentType">
+            <summary>
+            Type of content needed
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.SingleRequestContentModel.PrimaryContext">
+            <summary>
+            The primary context of the request.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.SingleRequestContentModel.ExtraContext">
+            <summary>
+            Extra context provided so that the AI can give more specialized response.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.SingleRequestContentModel.RequiredWordCount">
+            <summary>
+            Required word count of the content
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.ChildItemInventoryRequest">
+            <summary>
+            ChildLineItems associated to the main product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ChildItemInventoryRequest.SKU">
+            <summary>
+            ChildItem SKU associated with the main product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ChildItemInventoryRequest.Qty">
+            <summary>
+            The ChildItem quantity to be validated in the inventory.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.EcommerceModel.ProductDetailRequest">
+            <summary>
+            Model to validate inventory of each product.
+            </summary>
+        </member>
+        <member name="M:Znode.Engine.Api.Models.EcommerceModel.ProductDetailRequest.#ctor">
+            <summary>
+            Model to validate inventory of each product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ProductDetailRequest.SKU">
+            <summary>
+            SKU of the product to get Inventory details of Product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ProductDetailRequest.CartQty">
+            <summary>
+            The quantity of the product to be validated in the inventory.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ProductDetailRequest.ChildLineItems">
+            <summary>
+            List of child items associated with the main product.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.EcommerceModel.ParentProductInventoryDetailsResponse">
+            <summary>
+            Product inventory details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ParentProductInventoryDetailsResponse.ProductType">
+            <summary>
+            The type of Product.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse">
+            <summary>
+            Product inventory details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.PimProductId">
+            <summary>
+            PimProduct ID.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.ParentSKU">
+            <summary>
+            Parent product SKU
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.SKU">
+            <summary>
+            The SKU of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.InStockQty">
+            <summary>
+            The available quantity of the product in inventory.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.Price">
+            <summary>
+            The price of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.DisablePurchasing">
+            <summary>
+            A boolean value indicating whether purchasing of the product is disabled.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.DontTrackInventory">
+            <summary>
+            A boolean value indicating whether inventory tracking is disabled for the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.AllowBackOrdering">
+            <summary>
+            A boolean value indicating whether back ordering is allowed for the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.MinOrderQty">
+            <summary>
+            The minimum quantity of product that can be purchased.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ChildProductInventoryDetailsResponse.MaxOrderQty">
+            <summary>
+            The maximum quantity of product that can be purchased.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.EcommerceModel.ProductListRequest">
+            <summary>
+            Products details request to fetch the inventory details
+            </summary>
+        </member>
+        <member name="M:Znode.Engine.Api.Models.EcommerceModel.ProductListRequest.#ctor">
+            <summary>
+            ProductInventoryListRequest class constructor.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ProductListRequest.ProductInventoryList">
+            <summary>
+            List Of products details to fetch the inventory details. 
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.EcommerceModel.ProductListRequest.CookieMappingId">
+            <summary>
+            CookieMappingId used to check cart items.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.ProductInventoryModel">
+            <summary>
+            Product inventory details.
+            </summary>
+        </member>
+        <member name="M:Znode.Engine.Api.Models.ProductInventoryModel.#ctor">
+            <summary>
+            Product inventory details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryModel.ParentProductInventoryDetailsResponse">
+            <summary>
+            Parent product inventory details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryModel.ChildProductInventoryDetailsResponse">
+            <summary>
+            Child product inventory details.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.ProductInventoryRequest">
+            <summary>
+            Model to validate inventory of each product.
+            </summary>
+        </member>
+        <member name="M:Znode.Engine.Api.Models.ProductInventoryRequest.#ctor">
+            <summary>
+            Model to validate inventory of each product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryRequest.ParentSKU">
+            <summary>
+            Parent SKU of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryRequest.CartQty">
+            <summary>
+            The quantity of the product to be validated in the inventory.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryRequest.CookieMappingId">
+            <summary>
+            CookieMappingId used to check cart items.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryRequest.ChildLineItems">
+            <summary>
+            List of child items associated with the main product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodePaymentStatus.AUTHORIZED">
+            <summary>
+            Credit card Authorized
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodePaymentStatus.CAPTURED">
+            <summary>
+            Credit Card Captured.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodePaymentStatus.DECLINED">
+            <summary>
+            Credit Card Declined
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodePaymentStatus.REFUNDED">
+            <summary>
+            Credit Card Refunded
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodePaymentStatus.VOIDED">
+            <summary>
+            Credit Card Payment was Voided
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodePaymentStatus.PENDING">
+            <summary>
+            Credit Card Payment Pending
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodePaymentStatus.PENDINGFORREVIEW">
+            <summary>
+            Paypal Payment Pending for Review
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum">
+            <summary>
+            Znode Entity Type Enum For Global Attributes
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Store">
+            <summary>
+            Store type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Catalog">
+            <summary>
+            Catalog Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Voucher">
+            <summary>
+            Voucher Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.PriceList">
+            <summary>
+            Price List Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.PriceListItem">
+            <summary>
+            Price List Item Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Inventory">
+            <summary>
+            Inventory Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Warehouse">
+            <summary>
+            Warehouse Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Brand">
+            <summary>
+            Brand Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Page">
+            <summary>
+            Page Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Banner">
+            <summary>
+            Banner Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.EmailSMSTemplate">
+            <summary>
+            Email SMS Template Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.BlogNews">
+            <summary>
+            BlogNews Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.Promotion">
+            <summary>
+            Promotion Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.ProductReview">
+            <summary>
+            Product Review Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.ProductHighlight">
+            <summary>
+            Product Highlight Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.ShippingType">
+            <summary>
+            Shipping Type 
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.PaymentType">
+            <summary>
+            Payment Type 
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.StoreLocation">
+            <summary>
+            Store Location Type
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Enum.ZnodeEntityTypeEnum.UserProfile">
+            <summary>
+            User Profile Type
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.ExtendedSavedCartLineItemModel">
+            <summary>
+            Represents an extended model for a saved cart line item, inheriting additional properties from the base SavedCartLineItemModel.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ExtendedSavedCartLineItemModel.ParentProductName">
+            <summary>
+            This ParentProductName property belongs to name of the parent product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ExtendedSavedCartLineItemModel.AddonProductName">
+            <summary>
+            This AddonProductName property belongs to name of the add-on product.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.MessageBrokerModel">
+            <summary>
+            MessageBrokerModel to get the Default Configuration for webstore. 
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.MessageBrokerModel.RabbitMqServer">
+            <summary>
+            RabbitMqServer
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.MessageBrokerModel.QueueName">
+            <summary>
+            Queue Name for the webstore for Message Broker.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.MessageBrokerModel.QueueEvent">
+            <summary>
+            Queue Event for the webstore for Message Broker.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.HydratedCategorySeoModel">
+            <summary>
+            Represents the SEO-related details for a category.
+            </summary>
+            <remarks>
+            TODO: This model is temporary and should be removed in the future when the corresponding functionality is refactored or no longer needed.
+            </remarks>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.HydratedCategorySeoModel.ZnodeCategoryId">
+            <summary>
+            The unique identifier for the Znode category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.HydratedCategorySeoModel.Name">
+            <summary>
+            The name of the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.HydratedCategorySeoModel.CategoryCode">
+            <summary>
+            The code for the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.HydratedCategorySeoModel.ZnodeCatalogId">
+            <summary>
+            Unique identifier for the Znode catalog.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.HydratedCategorySeoModel.SEOUrl">
+            <summary>
+            the SEO URL for the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.HydratedCategorySeoModel.SEOCode">
+            <summary>
+            The SEO code associated with the category.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.AccountAddressResponse">
+            <summary>
+            Represents a placeholder for account address-related response data.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.AddressId">
+            <summary>
+            Gets or sets the unique identifier for an Address.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.AccountId">
+            <summary>
+            Gets or sets the unique identifier for an account.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.FirstName">
+            <summary>
+            Gets or sets the first name, limited to a maximum length of 300 characters.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.LastName">
+            <summary>
+            Gets or sets the last name, limited to a maximum length of 300 characters.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.DisplayName">
+            <summary>
+            Gets or sets the display name associated with the address, limited to a maximum length of 600 characters.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.CompanyName">
+            <summary>
+            Gets or sets the name of the company associated with the address.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.Address1">
+            <summary>
+            Gets or sets the first line of the address.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.Address2">
+            <summary>
+            Gets or sets the second line of the address (if applicable).
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.Address3">
+            <summary>
+            Gets or sets the third line of the address (if applicable).
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.CountryName">
+            <summary>
+            Gets or sets the country name.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.StateName">
+            <summary>
+            Gets or sets the state name.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.CityName">
+            <summary>
+            Gets or sets the city name.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.PostalCode">
+            <summary>
+            Gets or sets the postal code, limited to a maximum length of 50 characters.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.PhoneNumber">
+            <summary>
+            Gets or sets the phone number, limited to a maximum length of 50 characters.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.Mobilenumber">
+            <summary>
+            Gets or sets the mobile number associated with the address.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.AlternateMobileNumber">
+            <summary>
+            Gets or sets the alternate mobile number associated with the address.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.FaxNumber">
+            <summary>
+            Gets or sets the fax number associated with the address.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.IsDefaultBilling">
+            <summary>
+            Gets or sets a boolean indicating whether the address is the default billing address.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.IsDefaultShipping">
+            <summary>
+            Gets or sets a boolean indicating whether the address is the default shipping address.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AccountAddressResponse.IsActive">
+            <summary>
+            Gets or sets a boolean indicating whether the address is active.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse">
+            <summary>
+            Represents a response object containing information about associated products.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.PublishProductId">
+            <summary>
+            The ID of the published product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.ParentPublishProductId">
+            <summary>
+            The ID of the parent published product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.PimProductId">
+            <summary>
+            The ID of the PIM product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.SKU">
+            <summary>
+            The Stock Keeping Unit (SKU) of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.PIMColorSwatchText">
+            <summary>
+            The text for color swatch in PIM.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.PIMColorCode">
+            <summary>
+            The color code in PIM.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.PIMColorValue">
+            <summary>
+            The color value in PIM.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.PIMColorPath">
+            <summary>
+            The path for color in PIM.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.DisplayOrder">
+            <summary>
+            The display order of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.IsDefault">
+            <summary>
+            Indicates whether the product is default.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.RetailPrice">
+            <summary>
+            The retail price of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.SalesPrice">
+            <summary>
+            The sales price of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.CurrencyCode">
+            <summary>
+            The currency code for prices.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.CurrencySuffix">
+            <summary>
+            The currency suffix for prices.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AssociatedProductsResponse.AdditionalAttributes">
+            <summary>
+            Additional attributes for the product.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse">
+            <summary>
+            Represents a response containing select values for attributes.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse.Value">
+            <summary>
+            The value of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse.Code">
+            <summary>
+            The code of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse.DisplayOrder">
+            <summary>
+            The display order of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse.SwatchText">
+            <summary>
+            The text for the swatch of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse.Path">
+            <summary>
+            The path of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse.VariantDisplayOrder">
+            <summary>
+            The display order of the variant.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse.VariantImagePath">
+            <summary>
+            The image path for the variant.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.AttributesSelectValuesResponse.VariantSKU">
+            <summary>
+            The SKU of the variant.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.CategoryId">
+            <summary>
+            The unique identifier for the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.Category">
+            <summary>
+            The name of the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.Facets">
+            <summary>
+            The list of facets associated with the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.Products">
+            <summary>
+            The list of products within the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.CatalogId">
+            <summary>
+            The unique identifier for the catalog associated with the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.LocaleId">
+            <summary>
+            The unique identifier for the locale associated with the category.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.ProfileId">
+            <summary>
+            The unique identifier for the profile associated with the category, if applicable.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.PageNumber">
+            <summary>
+            The page number for pagination purposes, if applicable.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.PageSize">
+            <summary>
+            The page size for pagination purposes, if applicable.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.CategoryContentResponse.TotalProductCount">
+            <summary>
+            The total count of products within the category.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.CategoryRelationshipResponse">
+            <summary>
+            Represents a response containing category relationships.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.CategoryRelationshipResponse.CategoryId">
+            <summary>
+            The ID of the category.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.CategoryRelationshipResponse.ParentCategoryIds">
+            <summary>
+            The list of parent category IDs.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.ConfigurableAttributeResponse">
+            <summary>
+            Represents a response containing configurable attribute information.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ConfigurableAttributeResponse.AttributeValue">
+            <summary>
+            The value of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ConfigurableAttributeResponse.ImagePath">
+            <summary>
+            The image path for the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ConfigurableAttributeResponse.SwatchText">
+            <summary>
+            The text for the swatch of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ConfigurableAttributeResponse.IsDisabled">
+            <summary>
+            Indicates whether the attribute is disabled.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ConfigurableAttributeResponse.SelectValues">
+            <summary>
+            The list of select values for the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ConfigurableAttributeResponse.DisplayOrder">
+            <summary>
+            The display order of the attribute.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.ProductPromotionResponse">
+            <summary>
+            Represents a response containing information about a product promotion.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.ProductPromotionId">
+            <summary>
+            The ID of the product promotion.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.PublishProductId">
+            <summary>
+            The ID of the published product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.PromotionId">
+            <summary>
+            The ID of the promotion.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.ReferralPublishProductId">
+            <summary>
+            The ID of the referral published product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.PromotionProductQuantity">
+            <summary>
+            The quantity of the promotion product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.PromotionType">
+            <summary>
+            The type of the promotion.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.PromotionMessage">
+            <summary>
+            The message for the promotion.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.ExpirationDate">
+            <summary>
+            The expiration date of the promotion.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.ActivationDate">
+            <summary>
+            The activation date of the promotion.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ProductPromotionResponse.ProductIds">
+            <summary>
+            The list of product IDs associated with the promotion.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse">
+            <summary>
+            Represents a response object containing information about a product's inventory.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.SKU">
+            <summary>
+             The Stock Keeping Unit (SKU) of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.Quantity">
+            <summary>
+            The quantity of the product available.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.InventoryId">
+            <summary>
+            The ID of the inventory.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.WarehouseId">
+            <summary>
+            The ID of the warehouse where the product is stored (nullable).
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.WarehouseName">
+            <summary>
+            The name of the warehouse.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.WarehouseCode">
+            <summary>
+            The code of the warehouse.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.ProductId">
+            <summary>
+            The the ID of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.IsFromWarehouse">
+            <summary>
+            The value indicating whether the product is from a warehouse.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.IsDefaultWarehouse">
+            <summary>
+            The value indicating whether the warehouse is the default one.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.WarehouseCityName">
+            <summary>
+            The city where the warehouse is located.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.WarehouseStateName">
+            <summary>
+            The the state where the warehouse is located.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.WarehousePostalCode">
+            <summary>
+            The postal code of the warehouse.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.WarehouseAddress">
+            <summary>
+            The address of the warehouse.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ProductsInventoryResponse.DefaultInventoryCount">
+            <summary>
+            The default inventory count.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.PublishAttributeResponse">
+            <summary>
+            Represents a response containing information about a published attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.AttributeCode">
+            <summary>
+            The code of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.AttributeName">
+            <summary>
+            The name of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.AttributeValues">
+            <summary>
+            The values of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.AttributeTypeName">
+            <summary>
+            The type name of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsPromoRuleCondition">
+            <summary>
+            Indicates if the attribute is a promotional rule condition.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsComparable">
+            <summary>
+            Indicates if the attribute is comparable.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsHtmlTags">
+            <summary>
+            Indicates if the attribute contains HTML tags.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsFacets">
+            <summary>
+            Indicates if the attribute is used as a facet.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsUseInSearch">
+            <summary>
+            Indicates if the attribute is used in search.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsConfigurable">
+            <summary>
+            Indicates if the attribute is configurable.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsPersonalizable">
+            <summary>
+            Indicates if the attribute is personalizable.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsCustomField">
+            <summary>
+            Indicates if the attribute is a custom field.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsSwatch">
+            <summary>
+            Indicates if the attribute is a swatch.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.DisplayOrder">
+            <summary>
+            The display order of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.SelectedAttributeValue">
+            <summary>
+            The selected attribute values.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.SelectValues">
+            <summary>
+            The select values for the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.ConfigurableAttribute">
+            <summary>
+            The configurable attributes.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.AttributeValueCode">
+            <summary>
+            The code of the attribute value.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.IsDisabled">
+            <summary>
+            Indicates if the attribute is disabled.
+            </summary>
+        </member>
+        <member name="M:Znode.Engine.Api.Models.Responses.PublishAttributeResponse.#ctor">
+            <summary>
+            Initializes a new instance of the PublishAttributeResponse class.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetResponse.AttributeName">
+            <summary>
+            The name of the attribute associated with the facet.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetResponse.AttributeCode">
+            <summary>
+            The code of the attribute associated with the facet.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetResponse.AttributeValues">
+            <summary>
+            The list of values for the attribute associated with the facet.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetResponse.ControlTypeId">
+            <summary>
+            The unique identifier for the control type associated with the facet.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetResponse.DisplayOrder">
+            <summary>
+            The display order of the facet.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetResponse.ControlType">
+            <summary>
+            The type of control associated with the facet.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetValueResponse.AttributeValue">
+            <summary>
+            The value of the attribute associated with the facet.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetValueResponse.FacetCount">
+            <summary>
+            The count of items within this facet value.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetValueResponse.Label">
+            <summary>
+            The label for the facet value.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetValueResponse.RangeMax">
+            <summary>
+            The maximum value of a range, if applicable.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetValueResponse.RangeMin">
+            <summary>
+            The minimum value of a range, if applicable.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetValueResponse.RangeEnd">
+            <summary>
+            The end value of a range, if applicable.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetValueResponse.RangeStart">
+            <summary>
+            The start value of a range, if applicable.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchFacetValueResponse.DisplayOrder">
+            <summary>
+            The display order of the facet value, if applicable.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.Id">
+            <summary>
+            The unique identifier of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.ExternalId">
+            <summary>
+            The external identifier of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.ZnodeProductId">
+            <summary>
+            The Znode product ID.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.Version">
+            <summary>
+            The version of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.Name">
+            <summary>
+            The name of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.CategoryId">
+            <summary>
+            The category ID of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.CategoryName">
+            <summary>
+            The name of the category to which the product belongs.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.CurrencySuffix">
+            <summary>
+            The currency suffix for the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.Rating">
+            <summary>
+            The rating of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.TotalReviews">
+            <summary>
+            The total number of reviews for the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.SEODescription">
+            <summary>
+            The SEO description of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.SEOKeywords">
+            <summary>
+            The SEO keywords of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.SEOTitle">
+            <summary>
+            The SEO title of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.SEOUrl">
+            <summary>
+            The SEO URL of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.Promotions">
+            <summary>
+            The list of promotions associated with the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.Boost">
+            <summary>
+            The boost value of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.HighlightList">
+            <summary>
+            The list of highlight strings for the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.AddOns">
+            <summary>
+            The list of add-ons associated with the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.AssociatedGroupProducts">
+            <summary>
+            The list of associated group products.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.SwatchAttributesValues">
+            <summary>
+            The list of swatch attribute values for the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.ImageLargePath">
+            <summary>
+            The path of the large image of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.ImageMediumPath">
+            <summary>
+            The path of the medium-sized image of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.ImageThumbNailPath">
+            <summary>
+            The path of the thumbnail image of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.ImageSmallPath">
+            <summary>
+            The path of the small image of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.ImageSmallThumbnailPath">
+            <summary>
+            The path of the small thumbnail image of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.InStockMessage">
+            <summary>
+            The message for products that are in stock.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.OutOfStockMessage">
+            <summary>
+            The message for products that are out of stock.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.BackOrderMessage">
+            <summary>
+            The message for products that are on backorder.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.AssociatedProducts">
+            <summary>
+            The list of associated products.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.CategoryIds">
+            <summary>
+            The list of category IDs associated with the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SearchProductResponse.Inventory">
+            <summary>
+            Product inventory details.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse">
+            <summary>
+            Represents a response containing information about a web store add-on.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.GroupName">
+            <summary>
+            The group name of the add-on.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.DisplayType">
+            <summary>
+            The display type of the add-on.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.DisplayOrder">
+            <summary>
+            The display order of the add-on.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.IsRequired">
+            <summary>
+            Indicates if the add-on is required.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.IsAutoAddon">
+            <summary>
+            Indicates if the add-on is auto-addon.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.AutoAddonSKUs">
+            <summary>
+            The SKUs of auto-addon.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.AddOnValues">
+            <summary>
+            The values of the add-on.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.InventoryMessage">
+            <summary>
+            The inventory message of the add-on.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnResponse.IsOutOfStock">
+            <summary>
+            Indicates if the add-on is out of stock.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse">
+            <summary>
+            Represents a response containing information about a web store add-on value.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.PublishProductId">
+            <summary>
+            The ID of the published product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.LocaleId">
+            <summary>
+            The ID of the locale.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.SKU">
+            <summary>
+            The Stock Keeping Unit (SKU) of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.Name">
+            <summary>
+            The name of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.Quantity">
+            <summary>
+            The quantity of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.ReOrderLevel">
+            <summary>
+            The reorder level of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.SalesPrice">
+            <summary>
+            The sales price of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.RetailPrice">
+            <summary>
+            The retail price of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.CurrencyCode">
+            <summary>
+            The currency code for prices.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.CurrencySuffix">
+            <summary>
+            The currency suffix for prices.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.DisplayOrder">
+            <summary>
+            The display order of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.GroupName">
+            <summary>
+            The group name of the add-on.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.IsDefault">
+            <summary>
+            Indicates if the product is default.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.Attributes">
+            <summary>
+            The attributes of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAddOnValueResponse.CultureCode">
+            <summary>
+            The culture code of the product.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.WebStoreAttributeValueSwatchResponse">
+            <summary>
+            Represents a response containing swatch information for a web store attribute value.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAttributeValueSwatchResponse.ImageLargePath">
+            <summary>
+            The path to the large image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAttributeValueSwatchResponse.ImageMediumPath">
+            <summary>
+            The path to the medium-sized image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAttributeValueSwatchResponse.ImageThumbNailPath">
+            <summary>
+            The path to the thumbnail-sized image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAttributeValueSwatchResponse.ImageSmallPath">
+            <summary>
+            The path to the small-sized image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAttributeValueSwatchResponse.ImageSmallThumbnailPath">
+            <summary>
+            The path to the small thumbnail-sized image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAttributeValueSwatchResponse.Value">
+            <summary>
+            The value of the attribute.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreAttributeValueSwatchResponse.Code">
+            <summary>
+            The code of the attribute.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse">
+            <summary>
+            Represents a response containing information about a web store group product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.PublishProductId">
+            <summary>
+            The ID of the published product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.Name">
+            <summary>
+            The name of the group product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.ProductName">
+            <summary>
+            The name of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.LocaleId">
+            <summary>
+            The ID of the locale.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.CurrencySuffix">
+            <summary>
+            The currency suffix for prices.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.ImageLargePath">
+            <summary>
+            The path to the large image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.ImageMediumPath">
+            <summary>
+            The path to the medium-sized image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.ImageThumbNailPath">
+            <summary>
+            The path to the thumbnail-sized image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.ImageSmallPath">
+            <summary>
+            The path to the small-sized image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.ImageSmallThumbnailPath">
+            <summary>
+            The path to the small thumbnail-sized image.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.Attributes">
+            <summary>
+            The attributes of the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.InStockMessage">
+            <summary>
+            The message displayed when the product is in stock.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.OutOfStockMessage">
+            <summary>
+            The message displayed when the product is out of stock.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.BackOrderMessage">
+            <summary>
+            The message displayed when the product is on backorder.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.AssociatedProductDisplayOrder">
+            <summary>
+            The display order of associated products.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.WebStoreGroupProductResponse.Addons">
+            <summary>
+            The add-ons associated with the product.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.Ecommerce.ProductInventoryListResponse">
+            <summary>
+            Represents the response containing a list of product inventories.
+            </summary>
+        </member>
+        <member name="M:Znode.Engine.Api.Models.Responses.Ecommerce.ProductInventoryListResponse.#ctor">
+            <summary>
+            Initializes a new instance of the ProductInventoryListResponse class.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.Ecommerce.ProductInventoryListResponse.ProductInventories">
+            <summary>
+             Gets or sets the list of product inventories for the product list.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.MessageBrokerResponse">
+            <summary>
+            MessageBrokerResponse Model
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.MessageBrokerResponse.ErrorDetail">
+            <summary>
+            Error Detail contain error messages.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.MessageBrokerResponse.MessageBroker">
+            <summary>
+            MessageBroker Model to get the Configuration Details
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse">
+            <summary>
+            Represents a response object for a configurable product
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.PublishProductId">
+            <summary>
+            Represents the unique identifier for the published product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.SKU">
+            <summary>
+            Represents the stock keeping unit (SKU) of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.Name">
+            <summary>
+            Represents the name of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.LocaleId">
+            <summary>
+            Represents the identifier for the locale of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.CurrencySuffix">
+            <summary>
+            Represents the suffix for currency used in pricing.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.ImageLargePath">
+            <summary>
+            Represents the path to the large image of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.ImageName">
+            <summary>
+            Represents the name of the image associated with the product.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.ProductAttributes">
+            <summary>
+            The attributes of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.AlternateImageName">
+            <summary>
+            Represents an alternate name for the image associated with the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.InStockMessage">
+            <summary>
+            Represents the message displayed when the product is in stock.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.OutOfStockMessage">
+            <summary>
+            Represents the message displayed when the product is out of stock.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.BackOrderMessage">
+            <summary>
+            Represents the message displayed when the product is on backorder.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.AssociatedProductDisplayOrder">
+            <summary>
+            Represents the display order of associated products.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.WarehouseName">
+            <summary>
+            Represents the name of the warehouse where the product is stored.
+            </summary> 
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.DefaultInventoryCount">
+            <summary>
+            Represents the default inventory count of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.Quantity">
+            <summary>
+            Represents the quantity of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.ReOrderLevel">
+            <summary>
+            Represents the reorder level of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.SalesPrice">
+            <summary>
+            Represents the sales price of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.RetailPrice">
+            <summary>
+            Represents the retail price of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.CurrencyCode">
+            <summary>
+            Represents the currency code used for pricing.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.ConfigurableAttributeCodeList">
+            <summary>
+            Represents a list of configurable attribute codes associated with the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductResponse.IsDefault">
+            <summary>
+            Represents whether the product is set as default.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.ConfigurableProductsResponse">
+            <summary>
+            Configurable Product Variants List associated with the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.ConfigurableProductsResponse.ConfigurableProducts">
+            <summary>
+            Configurable Product List.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.AssociatedProduct">
+            <summary>
+            Response model for AssociatedProduct
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AssociatedProduct.Quantity">
+            <summary>
+            Quantity of the associated product
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AssociatedProduct.UnitPrice">
+            <summary>
+            Unit price of the associated product (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AssociatedProduct.ProductName">
+            <summary>
+            Name of the associated product (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AssociatedProduct.BackOrderMessage">
+            <summary>
+            Message displayed when the associated product is on backorder (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.AssociatedProduct.DefaultInventoryCount">
+            <summary>
+            Default inventory count for the associated product (if available)
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.GetSaveForLaterCartResponse">
+            <summary>
+            Response model for getting SaveForLater Cart
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.GetSaveForLaterCartResponse.ErrorDetail">
+            <summary>
+            Error Detail
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.GetSaveForLaterCartResponse.SaveForLaterItemList">
+            <summary>
+            List of cart items
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.PersonalizedValue">
+            <summary>
+            Response model for PersonaliseValue
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.PersonalizedValue.Code">
+            <summary>
+            Code associated with the personalization (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.PersonalizedValue.Value">
+            <summary>
+            Value of the personalization (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.PersonalizedValue.Name">
+            <summary>
+            Name of the personalization (if available)
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Responses.SaveForLaterItem">
+            <summary>
+            Model for SaveForLater Item
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.LineItemId">
+            <summary>
+            Identifier for the cart item
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.ParentLineItemId">
+            <summary>
+            Identifier for the parent cart item (if applicable)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.TemplateId">
+            <summary>
+            Identifier for the template
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.Title">
+            <summary>
+            SEO title (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.Url">
+            <summary>
+            SEO-friendly URL (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.PricePerUnit">
+            <summary>
+            Unit price of the item
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.Description">
+            <summary>
+            Description of the item in the cart (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.ProductName">
+            <summary>
+            Name of the product (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.ProductId">
+            <summary>
+            Identifier for the product
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.SKU">
+            <summary>
+            Stock Keeping Unit (SKU) for the product (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.ImagePath">
+            <summary>
+            Path to the product's image (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.Quantity">
+            <summary>
+            Quantity of the item
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.IsObsolete">
+            <summary>
+            Indicates whether the item is obsolete (true or false)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.DefaultInventory">
+            <summary>
+            Default inventory count for the item (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.OutOfStockMessage">
+            <summary>
+            Message displayed when the item is out of stock (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.PageName">
+            <summary>
+            SEO page name (if available)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.AssociatedProducts">
+            <summary>
+            List of associated products grouped with this item
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Responses.SaveForLaterItem.PersonalizedValues">
+            <summary>
+            List of personalized values associated with this item
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.SavedCartLineItemModel.ProductName">
+            <summary>
+            This ProductName property belongs to name of the child product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ShoppingCartItemModel.ProductName">
+            <summary>
+            This ProductName property belongs to name of the child product.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.CatalogHistoryListModel">
+            <summary>
+            Model for list of Catalog History.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.CatalogHistoryModel">
+            <summary>
+            Model for Catalog History
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.CategoryHistoryListModel">
+            <summary>
+            Model for list of Category History.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.CategoryHistoryModel">
+            <summary>
+            Model for Category History.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductAssociationPublishModel.PublishCategoryIds">
+            <summary>
+            To evict the respective category cache on product publish event.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.ProductHistoryListModel">
+            <summary>
+            Product History List Model.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.ProductHistoryModel">
+            <summary>
+            Product History Model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ParameterModelForPortalCountries.PortalId">
+            <summary>
+            This helps to pass in query parameter (Comma seperated string)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AssociatedParameterModel.AssociateIds">
+            <summary>
+            This helps to pass in query parameter (Comma seperated string)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductRequest.ParentProductId">
+            <summary>
+            The ID of the parent product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductRequest.ParentProductSKU">
+            <summary>
+            The SKU (Stock Keeping Unit) of the parent product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductRequest.ZnodeCatalogId">
+            <summary>
+            The ID of the catalog. This field is required. The value must be a positive integer.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductRequest.LocaleCode">
+            <summary>
+            The code of the locale. This field is required.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductRequest.StoreCode">
+            <summary>
+            The code of the portal.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishRequestModel.PortalId">
+            <summary>
+            Portal Id of the portal being published.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishRequestModel.TargetPublishState">
+            <summary>
+            Specifies the state to which the content has to be pushed during publish to a non default state.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishRequestModel.PublishContent">
+            <summary>
+            A comma separated string which specifies what content types have to be included during publish.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishRequestModel.TakeFromDraftFirst">
+            <summary>
+            Specifies whether the data saved as draft has to be included during publish.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.QuickOrderParameterModel.SKUs">
+            <summary>
+            This helps to pass in query parameter (Comma seperated string)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationModel.RecommendedProducts">
+            <summary>
+            To hold the recommended products detail.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.CustomerId">
+            <summary>
+            ID to identify the customer. Set to null if the customer is not known, or if it is desired to not consider the
+            customer while recommending products.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.ProductSkuCurrentlyBeingViewed">
+            <summary>
+            SKU to identify product being viewed. Only applicable when it is desired that products be recommended based on
+            this specific product as input. This applies, for example, while on the PDP for a product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.RecentlyViewedProductSkus">
+            <summary>
+            Skus of recently viewed products.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.ProductSkusInCart">
+            <summary>
+            SKUs of products in cart.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.CatalogId">
+            <summary>
+             ID of the catalog that is actively being used while fetching recommended products.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.LocaleId">
+            <summary>
+            ID of the locale.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.ProfileId">
+            <summary>
+            Id of the profile.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.PortalId">
+            <summary>
+            Id of the product.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.IsShowRecommendations">
+            <summary>
+            To avoid unwanted API call for recommendations when RecommendationRequestModel is insufficiently populated. 
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RecommendationRequestModel.WidgetCode">
+            <summary>
+            To hold the widget code.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.RequestParameterModel">
+            <summary>
+            Holds ParameterModel type property along with the required Filters, Sorts, Expands, Page index and Page size.
+            There will be a case when there is a need to fetch details from the API but to avoid the large query string(for Get type API)
+            data has been sent in the request body(for POST type API), therefore rest of the details like filters, sorts, expands, 
+            page index and page size can be sent in the request body itself for POST type API.
+            This model should used be cautiously.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RequestParameterModel.Parameter">
+            <summary>
+            Parameter model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RequestParameterModel.Expands">
+            <summary>
+            Expands
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RequestParameterModel.Filters">
+            <summary>
+            Filters
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RequestParameterModel.Sorts">
+            <summary>
+            Sorts
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RequestParameterModel.PageIndex">
+            <summary>
+            Page index.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.RequestParameterModel.PageSize">
+            <summary>
+            Page size.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.AdminCustomizationPageRequest">
+            <summary>
+            Request model used to fetch the assigned roles for the given Menu.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.Code">
+            <summary>
+            Code of the AdminCustomization Page/Section.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.Name">
+            <summary>
+            Display name of the AdminCustomization Page/Section.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.ContentArea">
+            <summary>
+            Decide if it is one of the below: 
+            - New Page(default selection)
+            - New Section
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.EntityType">
+            <summary>
+            Type of Entity for the Section.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.ContentType">
+            <summary>
+            Type of contents, it may be one of below : 
+            1. iFrame or Raw HTML
+            2. URL
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.ContentDetails">
+            <summary>
+            Details of the content based on the ContentType selected.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.SelectedRoles">
+            <summary>
+            List of assigned roles which is to be fetched.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.IsEnabled">
+            <summary>
+            Enable/Disable flag value.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.AdminPageURL">
+            <summary>
+            URL generated for the AdminPage.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRequest.SequenceNumber">
+            <summary>
+            Menu Sequence for the AdminPage.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.AdminCustomizationPageRoleRequest">
+            <summary>
+            Request Model for the Assigned Roles.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRoleRequest.Code">
+            <summary>
+            Code/ID of the Role.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRoleRequest.Name">
+            <summary>
+            Name or Display name of the Role.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.CategoryContentModel">
+            <summary>
+            Represents a content model for categories.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.CategoryContentModel.IsFacetList">
+            <summary>
+            Indicates if the category is a facet list.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.CategoryContentModel.LocaleId">
+            <summary>
+            The ID of the locale.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.CategoryContentModel.CatalogId">
+            <summary>
+            The ID of the catalog.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.CategoryContentModel.Category">
+            <summary>
+            The name of the category.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.CategoryContentModel.CategoryId">
+            <summary>
+            The ID of the category.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.CategoryContentModel.PortalId">
+            <summary>
+            The ID of the portal.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.CategoryContentModel.PageNumber">
+            <summary>
+            The page number for pagination.
+            </summary>
+        </member>
+        <member name="F:Znode.Engine.Api.Models.CategoryContentModel.PageSize">
+            <summary>
+            The page size for pagination.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.FetchAnyCategoryDetailsRequestModel">
+            <summary>
+            Fetch any category details request model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.FetchAnyCategoryDetailsRequestModel.PortalId">
+            <summary>
+            Portal Id
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.FetchAnyCategoryDetailsRequestModel.PublishCatalogId">
+            <summary>
+            Publish Catalog Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.FetchAnyCategoryDetailsRequestModel.AccountId">
+            <summary>
+            Account Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.FetchAnyCategoryDetailsRequestModel.ProfileId">
+            <summary>
+            Profile Id.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.FetchAnyProductDetailsRequestModel">
+            <summary>
+            Fetch any product details request model.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.FetchAnyProductDetailsRequestModel.PortalId">
+            <summary>
+            Portal Id
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.FetchAnyProductDetailsRequestModel.PublishCatalogId">
+            <summary>
+            Publish Catalog Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.FetchAnyProductDetailsRequestModel.AccountId">
+            <summary>
+            Account Id.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.FetchAnyProductDetailsRequestModel.ProfileId">
+            <summary>
+            Profile Id.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.AdminCustomizationPageListResponse">
+            <summary>
+            Response model used to fetch the list of given page/section details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageListResponse.PaginationDetail">
+            <summary>
+            Pagination Detail for List.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageListResponse.PageList">
+            <summary>
+            List of Page/Section.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.AdminCustomizationPageResponse">
+            <summary>
+            Response model used to fetch given page/section details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.Code">
+            <summary>
+            Code of the AdminCustomization Page/Section.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.Name">
+            <summary>
+            Display name of the AdminCustomization Page/Section.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.EntityType">
+            <summary>
+            Type of Entity for the Section.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.ContentArea">
+            <summary>
+            Decide if it is one of the below: 
+            - New Page(default selection)
+            - New Section
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.ContentType">
+            <summary>
+            Type of contents, it may be one of below : 
+            1. iFrame or Raw HTML
+            2. URL
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.ContentDetails">
+            <summary>
+            Details of the content based on the ContentType selected.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.SelectedRoles">
+            <summary>
+            List of assigned roles which is to be fetched.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.IsEnabled">
+            <summary>
+            Enable/Disable flag value.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.AdminPageURL">
+            <summary>
+            URL generated for the AdminPage.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageResponse.SequenceNumber">
+            <summary>
+            Menu Sequence for the AdminPage.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.AdminCustomizationPageRoleResponse">
+            <summary>
+            Response model used to fetch the assigned role for the given Menu.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRoleResponse.RoleId">
+            <summary>
+            Id of assigned role which is to be fetched.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.AdminCustomizationPageRoleResponse.RoleName">
+            <summary>
+            Name of assigned role which is to be fetched..
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.PublishCategoryDetailResponseModel">
+            <summary>
+            Publish category details response.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishCategoryDetailResponseModel.ErrorDetail">
+            <summary>
+            Error Detail
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishCategoryDetailResponseModel.PublishCategoryDetails">
+            <summary>
+            Publish category details.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.PublishProductDetailResponseModel">
+            <summary>
+            Publish product details response.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductDetailResponseModel.ErrorDetail">
+            <summary>
+            Error Detail
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.PublishProductDetailResponseModel.PublishProductDetail">
+            <summary>
+            Publish product details.
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.ProductInventoryResponse">
+            <summary>
+            Product inventory details.
+            </summary>
+        </member>
+        <member name="M:Znode.Engine.Api.Models.ProductInventoryResponse.#ctor">
+            <summary>
+            Product inventory details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryResponse.ErrorDetail">
+            <summary>
+            Error Details that occurred during the request.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryResponse.ParentProductInventoryDetailsResponse">
+            <summary>
+            Parent product inventory details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ProductInventoryResponse.ChildProductInventoryDetailsResponse">
+            <summary>
+            Child product inventory details.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ParameterModel.Ids">
+            <summary>
+            This helps to pass in query parameter (Comma seperated string)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ParameterModelForWidgetCategory.CategoryCodes">
+            <summary>
+            This helps to pass in query parameter (Comma seperated string)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.ParameterInventoryPriceModel.Parameter">
+            <summary>
+            This helps to pass in query parameter (Comma seperated string)
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.SearchProfileParameterModel.Ids">
+            <summary>
+            This helps to pass in query parameter (Comma seperated string)
+            </summary>
+        </member>
+        <member name="T:Znode.Engine.Api.Models.Sitemaps">
+            <summary>
+            Sitemap LOcation URL.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Sitemaps.Loc">
+            <summary>
+            Sitemap file location.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.Sitemaps.Lastmod">
+            <summary>
+            Last modified Date.
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.UpdateIsSellerImporterOfDutyRequest.OmsOrderNumber">
+            <summary>
+            Oms Order Number
+            </summary>
+        </member>
+        <member name="P:Znode.Engine.Api.Models.UpdateIsSellerImporterOfDutyRequest.IsSellerImporterOfDuty">
+            <summary>
+            Indicate that is Seller Imported of duty
+            </summary>
+        </member>
+    </members>
+</doc>

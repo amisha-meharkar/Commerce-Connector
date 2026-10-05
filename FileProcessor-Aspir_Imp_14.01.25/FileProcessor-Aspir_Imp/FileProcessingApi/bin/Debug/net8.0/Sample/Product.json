@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Name": "Apple",
+    "Category": "Fruit",
+    "Price": 0.50,
+    "Quantity": 100
+  },
+  {
+    "Id": 2,
+    "Name": "Banana",
+    "Category": "Fruit",
+    "Price": 0.30,
+    "Quantity": 150
+  },
+  {
+    "Id": 3,
+    "Name": "Carrot",
+    "Category": "Vegetable",
+    "Price": 0.20,
+    "Quantity": 200
+  },
+  {
+    "Id": 4,
+    "Name": "Broccoli",
+    "Category": "Vegetable",
+    "Price": 0.80,
+    "Quantity": 120
+  },
+  {
+    "Id": 5,
+    "Name": "Chicken",
+    "Category": "Meat",
+    "Price": 5.00,
+    "Quantity": 50
+  }
+]

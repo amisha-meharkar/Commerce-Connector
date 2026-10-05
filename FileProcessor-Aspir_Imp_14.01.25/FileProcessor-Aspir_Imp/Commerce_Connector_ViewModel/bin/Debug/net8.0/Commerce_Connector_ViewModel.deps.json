@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Commerce_Connector_ViewModel/1.0.0": {
+        "runtime": {
+          "Commerce_Connector_ViewModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Commerce_Connector_ViewModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

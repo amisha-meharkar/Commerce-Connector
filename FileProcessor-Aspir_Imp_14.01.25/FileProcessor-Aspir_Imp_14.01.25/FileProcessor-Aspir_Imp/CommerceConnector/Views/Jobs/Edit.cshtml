@@ -1,0 +1,210 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Commerce_Connector_ViewModel.ViewModels.FileProcessingMessageViewModel
+
+@{
+    ViewBag.Title = "Edit Job Details";
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fdfdfd;
+    }
+
+        input:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+    textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        margin-left: 10px;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+
+    h4 {
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+</style>
+
+<h2>Edit Job Details</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="JobId">Job ID</label>
+        <input asp-for="JobId" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FilePath">File Path</label>
+        <input asp-for="FilePath" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FileType">File Type</label>
+        <input asp-for="FileType" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LocationType">Location Type</label>
+        <input asp-for="LocationType" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ModelType">Model Type</label>
+        <input asp-for="ModelType" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="JobType">Job Type</label>
+        <input asp-for="JobType" class="form-control" />
+    </div>
+
+    @* <div class="form-group">
+        <label asp-for="MappingsJson">Mappings JSON</label>
+        <textarea asp-for="MappingsJson" class="form-control"></textarea>
+    </div> *@
+    <h4>Edit Mappings</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CSV Column</th>
+                <th>Target Column</th>
+                <th>Transition Expression</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Mappings.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="hidden" asp-for="Mappings[i].MappingId" />
+                        <input asp-for="Mappings[i].MapCsvColumn" class="form-control" />
+                    </td>
+                    <td>
+                        <input asp-for="Mappings[i].MapTargetColumn" class="form-control" />
+                    </td>
+                    <td>
+                        <input asp-for="Mappings[i].TransitionExpression" class="form-control" placeholder="Enter Transition Expression" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <h4>Location Configuration</h4>
+    <div class="form-group">
+        <label asp-for="LocationConfig.ServerAddress">Server Address</label>
+        <input asp-for="LocationConfig.ServerAddress" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LocationConfig.Username">Username</label>
+        <input asp-for="LocationConfig.Username" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LocationConfig.Password">Password</label>
+        <input asp-for="LocationConfig.Password" type="password" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LocationConfig.ApiEndpoint">API Endpoint</label>
+        <input asp-for="LocationConfig.ApiEndpoint" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LocationConfig.ApiKey">API Key</label>
+        <input asp-for="LocationConfig.ApiKey" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LocationConfig.ContainerName">Container Name</label>
+        <input asp-for="LocationConfig.ContainerName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LocationConfig.ConnectionString">Connection String</label>
+        <input asp-for="LocationConfig.ConnectionString" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="JobsList" class="btn btn-secondary">Cancel</a>
+</form>

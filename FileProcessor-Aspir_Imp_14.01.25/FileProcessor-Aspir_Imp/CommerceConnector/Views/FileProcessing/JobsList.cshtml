@@ -1,0 +1,146 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Commerce_Connector_ViewModel.ViewModels.FileProcessingMessageViewModel>
+
+@{
+    ViewBag.Title = "Jobs List";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-container {
+            margin: 20px auto;
+            width: 90%;
+        }
+        .no-data {
+            font-weight: bold;
+            text-align: center;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center my-4">Jobs List</h2>
+        <button id="showDashboardBtn" class="btn btn-primary">Show Hangfire Dashboard</button>
+        <div id="hangfireModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Hangfire Dashboard</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe id="hangfireDashboardIframe" src="" style="width:100%; height:500px; border:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="tblJobs" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Job ID</th>
+                        <th>File Path</th>
+                        @* <th>File Type</th> *@
+                        <th>Location Type</th>
+                        <th>Model Type</th>
+                        <th>Mappings</th>
+                        <th>Server Address</th>
+                        <th>API Endpoint</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>ApiKey</th>
+                        <th>ContainerName</th>
+                        <th>ConnectionString</th>
+                        <th></th>
+                   </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var job in Model)
+                        {
+                            <tr>
+                                <td>@job.JobId</td>
+                                <td>@job.FilePath</td>
+                               @*  <td>@job.FileType</td> *@
+                                <td>@job.LocationType</td>
+                                <td>@job.ModelType</td>
+                                <td>@job.MappingsJson</td>
+                                <td>@job.LocationConfig?.ServerAddress</td>
+                                <td>@job.LocationConfig?.ApiEndpoint</td>
+                                <td>@job.LocationConfig?.Username</td>
+                                <td>@job.LocationConfig?.Password</td>
+                                <td>@job.LocationConfig?.ApiKey</td>
+                                <td>@job.LocationConfig?.ContainerName</td>
+                                <td>@job.LocationConfig?.ConnectionString</td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = job.JobId }, new { @class = "btn btn-primary" })
+                                    
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="9" class="no-data">No jobs available.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Initialize DataTable with options
+        var table = new DataTable('#tblJobs', {
+            scrollCollapse: true,
+            scroller: true,
+            scrollY: 200
+        });
+
+        // Remove duplicate header
+        $('#tblJobs thead').remove();
+
+        // Add event listener for re-drawing the table when necessary
+        table.on('draw', function () {
+            // Remove header on each draw
+            $('#tblJobs thead').remove();
+        });
+    });
+    </script>
+        <script>
+            $(document).ready(function () {
+                // Attach a click event to the button
+                $('#showDashboardBtn').click(function () {
+                    // Set the src of the iframe to the Hangfire dashboard URL
+                    $('#hangfireDashboardIframe').attr('src', 'https://localhost:7185/hangfire');
+
+                    // Show the modal
+                    $('#hangfireModal').modal('show');
+                });
+        });
+        </script>
+
+</html>

@@ -1,0 +1,566 @@
+﻿@using Commerce_Connector_ViewModel.ViewModels
+
+@model FileProcessingMessageViewModel
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa; /* Light background */ 
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        border-radius: 8px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #495057;
+    }
+
+    .form-control, select {
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        transition: border-color 0.3s ease;
+    }
+
+        .form-control:focus, select:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.2);
+        }
+
+    /* .btn-primary {
+        background-color: #007bff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    } */
+
+       /*  .btn-primary:hover {
+            background-color: #0056b3;
+        } */
+
+    #additionalConfig {
+        background-color: #e9ecef;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .card-header {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #modelPropertiesContainer {
+        padding: 15px;
+        border: 2px dashed #ced4da;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+</style>
+@if (TempData["StatusMessage"] != null)
+{
+    <div id="statusMessageAlert" class="alert alert-info">
+        @TempData["StatusMessage"]
+    </div>
+}
+
+<div class="container">
+    <h2>File Processing Configuration</h2>
+    <form asp-action="Index" method="post">
+        <div class="form-group">
+            <label asp-for="FilePath"></label>
+            <input asp-for="FilePath" class="form-control" id="filePath" />
+            <span asp-validation-for="FilePath" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FileType"></label>
+            <select asp-for="FileType" class="form-control" id="fileType">
+                <option value="">-- Select File Type --</option>
+                <option value="CSV">CSV</option>
+                <option value="XML">XML</option>
+                <option value="JSON">JSON</option>
+            </select>
+            <span asp-validation-for="FileType" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LocationType"></label>
+            <select asp-for="LocationType" class="form-control" id="locationType">
+                <option value="">-- Select Location Type --</option>
+                <option value="SFTP">SFTP</option>
+                <option value="API">API</option>
+                <option value="Blob">Blob</option>
+                <option value="Local">Local</option>
+                <option value="FTP">FTP</option>
+            </select>
+            <span asp-validation-for="LocationType" class="text-danger"></span>
+        </div>
+
+        <div id="additionalConfig" style="display:none;">
+            <div class="card">
+                <div class="card-header">
+                    Additional Configuration
+                </div>
+                <div class="card-body">
+                    <div class="form-group" id="serverConfig" style="display:none;">
+                        <label asp-for="LocationConfig.ServerAddress"></label>
+                        <input asp-for="LocationConfig.ServerAddress" class="form-control" />
+                        <label asp-for="LocationConfig.Username"></label>
+                        <input asp-for="LocationConfig.Username" class="form-control" />
+                        <label asp-for="LocationConfig.Password"></label>
+                        <input asp-for="LocationConfig.Password" type="password" class="form-control" />
+                    </div>
+
+                    <div class="form-group" id="apiConfig" style="display:none;">
+                        <label asp-for="LocationConfig.ApiEndpoint"></label>
+                        <input asp-for="LocationConfig.ApiEndpoint" class="form-control" />
+                        <label asp-for="LocationConfig.ApiKey"></label>
+                        <input asp-for="LocationConfig.ApiKey" class="form-control" />
+                    </div>
+
+                    <div class="form-group" id="blobConfig" style="display:none;">
+                        <label asp-for="LocationConfig.ContainerName"></label>
+                        <input asp-for="LocationConfig.ContainerName" class="form-control" />
+                        <label asp-for="LocationConfig.ConnectionString"></label>
+                        <input asp-for="LocationConfig.ConnectionString" class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label asp-for="ModelType"></label>
+            <select asp-for="ModelType" class="form-control" id="modelType" disabled>
+                <option value="">-- Select Model Type --</option>
+                <option value="ProductModel">Product</option>
+                <option value="Order">Order</option>
+                <option value="Customer">Customer</option>
+                <option value="Account">Account</option>
+                <option value="InventoryModel">Inventory</option>
+            </select>
+            <span asp-validation-for="ModelType" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="TemplateDropdown">Select Template</label>
+            <select class="form-control" id="templateDropdown">
+                <option value="">-- Select Template --</option>
+            </select>
+        </div>
+
+        <button id="submitBtn" type="submit" class="btn btn-primary" disabled>Submit</button>
+    </form>
+
+    <div id="modelPropertiesContainer" class="mt-4" style="display:none;"></div>
+    <button id="saveMappingBtn" class="btn btn-secondary" disabled>Save Mapping</button>
+   @*  <button id="postview" class="btn btn-primary">File Data After Applying transitions</button> *@
+   @*  <button id="postview" class="btn btn-primary" style="display:none;">File Data After Applying transitions</button>
+
+    <div id="postviewDataContainer" class="mt-4"></div> *@
+
+
+    <button id="postview" class="btn btn-primary" style="display:none;" data-bs-toggle="modal" data-bs-target="#fileDataModal">
+        File Data After Applying Transitions
+    </button>
+
+    <!-- Modal structure -->
+    <div class="modal fade" id="fileDataModal" tabindex="-1" aria-labelledby="fileDataModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fileDataModalLabel">File Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="postviewDataContainer">
+                    <!-- Loading spinner will be shown here initially -->
+                    <div class="text-center my-5">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div id="jobScheduling" style="display:none;">
+    @Html.Partial("_JobScheduling")
+</div>
+
+@section Scripts {
+    <script>
+
+        document.getElementById("locationType").addEventListener("change", function () {
+            var selectedType = this.value;
+            document.getElementById("additionalConfig").style.display = "block";
+
+            // Hide all additional configuration fields
+            document.getElementById("serverConfig").style.display = "none";
+            document.getElementById("apiConfig").style.display = "none";
+            document.getElementById("blobConfig").style.display = "none";
+
+            // Show relevant fields based on selection
+            if (selectedType === "SFTP" || selectedType === "FTP") {
+                document.getElementById("serverConfig").style.display = "block";
+            } else if (selectedType === "API") {
+                document.getElementById("apiConfig").style.display = "block";
+            } else if (selectedType === "Blob") {
+                document.getElementById("blobConfig").style.display = "block";
+            }
+        });
+
+        setTimeout(function () {
+            var alertElement = document.getElementById('statusMessageAlert');
+            if (alertElement) {
+                alertElement.style.display = 'none';
+            }
+        }, 10000);
+
+        $(document).ready(function () {
+            // When modelType dropdown changes
+            $('#modelType').change(function () {
+                var selectedModelType = $(this).val(); // Get selected value
+
+                // Clear and reset the template dropdown
+                $('#templateDropdown').empty();
+                $('#templateDropdown').append('<option value="">-- Select Template --</option>');
+
+                // Variables for ImportHeadId, FamilyId, and PromotionTypeId
+                var importHeadId = 0, familyId = 0, promotionTypeId = 0;
+
+                // Set values based on the selected model type
+                if (selectedModelType === "ProductModel") {
+                    importHeadId = 1;
+                    familyId = 9; // FamilyId for ProductModel
+                } else if (selectedModelType === "InventoryModel") {
+                    importHeadId = 3;
+                    familyId = 0; // If no familyId is relevant, keep it 0
+                }
+
+                // Send AJAX request to get templates
+                $.ajax({
+                    url: '/Template/GetTemplates', // Your controller action
+                    type: 'GET',
+                    data: {
+                        importHeadId: importHeadId,
+                        familyId: familyId,
+                        promotionTypeId: promotionTypeId
+                    },
+                    success: function (data) {
+                        console.log(data);
+                        // Check if data is valid and populate the dropdown
+                        if (data && data.length > 0) {
+                            $.each(data, function (index, template) {
+                                $('#templateDropdown').append(
+                                    `<option value="${template.importTemplateId}" data-templateName="${template.templateName}"
+                                        data-importHeadId="${template.importHeadId}" data-familyId="${familyId}">
+                                        ${template.templateName}
+                                    </option>`
+                                );
+                            });
+                        } else {
+                            $('#templateDropdown').append('<option value="">No templates found</option>');
+                        }
+                    },
+                    error: function () {
+                        alert('Error fetching templates.');
+                    }
+                });
+            });
+
+            // When templateDropdown changes
+            $('#templateDropdown').change(function () {
+                console.log('Template dropdown changed');  // Check if this is printed when the dropdown value changes
+
+                var selectedTemplate = $(this).find(":selected");
+                var importTemplateId = selectedTemplate.val();
+                var templateName = selectedTemplate.attr('data-templateName'); // Use attr for dynamic data
+                var importHeadId = selectedTemplate.attr('data-importHeadId');
+                var familyId = selectedTemplate.attr('data-familyId'); // This should now reflect correctly
+                var promotionTypeId = 0;
+
+                var filePath = $('#filePath').val();
+                var fileType = $('#fileType').val();
+                var locationType = $('#locationType').val();
+                var modelType = $('#modelType').val();
+
+
+                var locationConfig = {
+                    ServerAddress: $('#LocationConfig_ServerAddress').val(),
+                    Username: $('#LocationConfig_Username').val(),
+                    Password: $('#LocationConfig_Password').val(),
+                    ApiEndpoint: $('#LocationConfig_ApiEndpoint').val(),
+                    ApiKey: $('#LocationConfig_ApiKey').val(),
+                    ContainerName: $('#LocationConfig_ContainerName').val(),
+                    ConnectionString: $('#LocationConfig_ConnectionString').val()
+                };
+
+                var fileMessage = {
+                    FilePath: filePath,
+                    FileType: fileType,
+                    LocationType: locationType,
+                    ModelType: modelType,
+                    LocationConfig: locationConfig
+                };
+
+                console.log("FileMessage:", fileMessage);
+
+
+                var templateDetails = {
+                    ImportTemplateId: importTemplateId,
+                    TemplateName: templateName,
+                    ImportHeadId: importHeadId,
+                    FamilyId: familyId,
+                    PromotionTypeId: promotionTypeId
+                };
+
+                console.log("TemplateDetails:", templateDetails);
+
+                $.ajax({
+                    url: '/Mapping/FetchPropertiesAndHeadersCombined', // Your controller action
+                    type: 'POST',
+                    data: {
+                        fileMessage: fileMessage,
+                        templateDetails: templateDetails
+                    },
+                    success: function (response) {
+                        $('#modelPropertiesContainer').html(response);
+                        // Button ko show karen success ke baad
+                        $('#postview').show();
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("AJAX Error:", status, error);
+                    }
+                });
+            });
+        });
+
+        $('#saveMappingBtn').click(function () {
+            // let mappings = {};
+
+            // $('#modelPropertiesContainer .property-row').each(function () {
+            //     let property = $(this).find('label').text();
+            //     let selectedHeader = $(this).find('select').val();
+
+            //     if (selectedHeader) {
+            //         mappings[property] = selectedHeader;
+            //     }
+            // });
+
+            // let jsonData = JSON.stringify(mappings);
+            // console.log(jsonData)
+            let mappings = [];
+
+            $('#modelPropertiesContainer .property-row').each(function (index) {
+                let property = $(this).find('label').text();
+                let selectedHeader = $(this).find('select').val();
+                let transitionValue = $(this).find('.transition-rule-value').val(); // For Transition Value
+
+                if (selectedHeader) {
+                    mappings.push({
+                        MappingId: mappings.length,
+                        MapCsvColumn: selectedHeader,
+                        MapTargetColumn: property,
+                        TransitionExpression: transitionValue
+                    });
+                }
+            });
+
+            let jsonData = JSON.stringify(mappings);
+            console.log(jsonData);
+
+            var filePath = $('#filePath').val();
+            var fileType = $('#fileType').val();
+            var locationType = $('#locationType').val();
+            var modelType = $('#modelType').val();
+            var locationConfig = {
+                ServerAddress: $('#LocationConfig_ServerAddress').val(),
+                Username: $('#LocationConfig_Username').val(),
+                Password: $('#LocationConfig_Password').val(),
+                ApiEndpoint: $('#LocationConfig_ApiEndpoint').val(),
+                ApiKey: $('#LocationConfig_ApiKey').val(),
+                ContainerName: $('#LocationConfig_ContainerName').val(),
+                ConnectionString: $('#LocationConfig_ConnectionString').val()
+            };
+            let fileMessage = {
+                FilePath: filePath,
+                FileType: fileType,
+                LocationType: locationType,
+                modelType: modelType,
+                mappingsJson: jsonData,
+                LocationConfig: locationConfig
+                
+            };
+            $.ajax({
+                url: '/Mapping/SaveMappings',
+                type: 'POST',
+                data: { fileMessage: fileMessage },
+                // success: function () {
+                //     alert("Mapping successfully saved");
+                // },
+                // error: function () {
+                //     alert("error.");
+                // }
+            });
+        });
+
+        $('#postview').click(function () {
+            let mappings = [];
+
+            $('#modelPropertiesContainer .property-row').each(function (index) {
+                let property = $(this).find('label').text();
+                let selectedHeader = $(this).find('select').val();
+                let transitionValue = $(this).find('.transition-rule-value').val(); // For Transition Value
+
+                if (selectedHeader) {
+                    mappings.push({
+                        MappingId: mappings.length,
+                        MapCsvColumn: selectedHeader,
+                        MapTargetColumn: property,
+                        TransitionExpression: transitionValue
+                    });
+                }
+            });
+
+            let jsonData = JSON.stringify(mappings);
+            console.log(jsonData);
+
+            var filePath = $('#filePath').val();
+            var fileType = $('#fileType').val();
+            var locationType = $('#locationType').val();
+            var modelType = $('#modelType').val();
+            var locationConfig = {
+                ServerAddress: $('#LocationConfig_ServerAddress').val(),
+                Username: $('#LocationConfig_Username').val(),
+                Password: $('#LocationConfig_Password').val(),
+                ApiEndpoint: $('#LocationConfig_ApiEndpoint').val(),
+                ApiKey: $('#LocationConfig_ApiKey').val(),
+                ContainerName: $('#LocationConfig_ContainerName').val(),
+                ConnectionString: $('#LocationConfig_ConnectionString').val()
+            };
+
+            let fileMessage = {
+                FilePath: filePath,
+                FileType: fileType,
+                LocationType: locationType,
+                modelType: modelType,
+                mappingsJson: jsonData,
+                LocationConfig: locationConfig
+            };
+
+            // Show a loading spinner in the modal body
+            $('#postviewDataContainer').html('<div class="text-center my-5"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div>');
+
+            // Open the modal to show the spinner immediately
+            $('#fileDataModal').modal('show');
+
+            $.ajax({
+                url: '/FileProcessing/PreviewTransitionExpression',
+                type: 'POST',
+                data: { fileMessage: fileMessage },
+                success: function (data) {
+                    // Replace the spinner with the actual content on success
+                    $('#postviewDataContainer').html(data);
+                },
+                error: function () {
+                    // Replace the spinner with an error message on failure
+                    $('#postviewDataContainer').html('<div class="text-danger text-center my-5">An error occurred while loading data. Please try again.</div>');
+                }
+            });
+        });
+
+    </script>
+   
+    <script>
+    $(document).ready(function() {
+        // Initially, both Submit and Save Mapping buttons are disabled
+        $("#submitBtn").prop("disabled", true);
+      
+        $("#saveMappingBtn").prop("disabled", true);
+
+        // When the Model Type dropdown changes
+        $("#modelType").change(function() {
+            if ($(this).val()) {
+                // Show model properties container
+                $("#modelPropertiesContainer").show();
+                // Enable the Save Mapping button
+                $("#saveMappingBtn").prop("disabled", false);
+            }
+        });
+
+        // When the Save Mapping button is clicked
+        $("#saveMappingBtn").click(function() {
+            // Enable the Submit button
+            $("#submitBtn").prop("disabled", false);
+            $("#jobScheduling").show();
+            // Disable the Save Mapping button
+            $("#saveMappingBtn").prop("disabled", true);
+        });
+    });
+
+</script>
+
+}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filePathInput = document.getElementById("filePath");
+        const fileTypeSelect = document.getElementById("fileType");
+        const locationTypeSelect = document.getElementById("locationType");
+        const modelTypeSelect = document.getElementById("modelType");
+        const submitBtn = document.getElementById("submitBtn");
+
+        // Function to check if all fields are filled
+        function checkFields() {
+            const isFilePathFilled = filePathInput.value.trim() !== "";
+            const isFileTypeSelected = fileTypeSelect.value.trim() !== "";
+            const isLocationTypeSelected = locationTypeSelect.value.trim() !== "";
+
+            // Enable or disable the ModelType dropdown and Submit button
+            if (isFilePathFilled && isFileTypeSelected && isLocationTypeSelected) {
+                modelTypeSelect.disabled = false;
+            } else {
+                modelTypeSelect.disabled = true;
+            }
+
+            // Enable the Submit button only if ModelType is also selected
+            submitBtn.disabled = modelTypeSelect.value.trim() === "" || modelTypeSelect.disabled;
+        }
+
+        // Add event listeners to inputs
+        filePathInput.addEventListener("input", checkFields);
+        fileTypeSelect.addEventListener("change", checkFields);
+        locationTypeSelect.addEventListener("change", checkFields);
+        modelTypeSelect.addEventListener("change", checkFields);
+    });
+</script>

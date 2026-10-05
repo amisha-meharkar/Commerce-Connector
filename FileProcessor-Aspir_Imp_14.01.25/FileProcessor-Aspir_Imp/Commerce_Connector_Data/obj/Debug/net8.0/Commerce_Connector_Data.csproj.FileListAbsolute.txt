@@ -1,0 +1,14 @@
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\bin\Debug\net8.0\Commerce_Connector_Data.deps.json
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\bin\Debug\net8.0\Commerce_Connector_Data.runtimeconfig.json
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\bin\Debug\net8.0\Commerce_Connector_Data.dll
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\bin\Debug\net8.0\Commerce_Connector_Data.pdb
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\Commerce_Connector_Data.csproj.AssemblyReference.cache
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\Commerce_Connector_Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\Commerce_Connector_Data.AssemblyInfoInputs.cache
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\Commerce_Connector_Data.AssemblyInfo.cs
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\Commerce_Connector_Data.csproj.CoreCompileInputs.cache
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\Commerce_Connector_Data.dll
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\refint\Commerce_Connector_Data.dll
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\Commerce_Connector_Data.pdb
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\Commerce_Connector_Data.genruntimeconfig.cache
+C:\Users\amisha.meharkar\Documents\FileProcessor-Aspir_Imp\Commerce_Connector_Data\obj\Debug\net8.0\ref\Commerce_Connector_Data.dll

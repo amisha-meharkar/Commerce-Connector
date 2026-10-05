@@ -1,0 +1,44 @@
+﻿@model System.Data.DataTable
+
+<div class="table-container">
+    <table id="dataTable" class="table table-striped">
+        <thead>
+            <tr>
+                @foreach (System.Data.DataColumn col in Model.Columns)
+                {
+                    <th>@col.ColumnName</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (System.Data.DataRow row in Model.Rows)
+            {
+                <tr>
+                    @foreach (var item in row.ItemArray)
+                    {
+                        <td>@item</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .table-container {
+        max-height: 400px; /* Adjust the height as needed */
+        overflow-y: auto; /* Vertical scrollbar */
+        overflow-x: auto; /* Horizontal scrollbar if needed */
+    }
+
+    #dataTable {
+        width: 100%; /* Ensure the table fits within the container */
+        border-collapse: collapse; /* For better table display */
+    }
+
+    th, td {
+        white-space: nowrap; /* Prevents wrapping of cell content */
+        padding: 8px; /* Adds padding to table cells */
+        text-align: left; /* Align text to the left */
+    }
+</style>

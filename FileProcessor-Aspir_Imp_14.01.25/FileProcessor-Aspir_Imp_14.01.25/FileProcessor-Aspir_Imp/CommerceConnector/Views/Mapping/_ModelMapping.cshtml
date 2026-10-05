@@ -1,0 +1,246 @@
+﻿@using Commerce_Connector_ViewModel.ViewModels
+@model ModelMappingViewModel
+
+<style>
+    .property-row, .header-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .property-label, .header-label {
+        width: 20%;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
+    .property-select, .property-input, .header-label-select, .header-label-input {
+        width: 25%;
+        margin-right: 10px;
+    }
+
+    .invalid-feedback {
+        display: none; /* Initially hidden */
+        color: red;
+        font-size: 12px;
+    }
+
+    .is-invalid {
+        border-color: red;
+    }
+
+    .property-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative; /* For positioning the preview box */
+    }
+
+    .preview-box {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 0;
+        left: 85%; /* Position to the right of the button */
+        margin-left: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        max-height: 200px; /* Set a maximum height for the preview box */
+        overflow-y: auto; /* Add vertical scrolling if content exceeds max height */
+    }
+
+        .preview-box .close-btn {
+            position: sticky;
+            top: 0;
+            left: 237px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+
+    .property-label,
+    .property-select,
+    .property-input {
+        margin-right: 10px;
+    }
+
+    .invalid-feedback {
+        display: none;
+        color: red;
+        font-size: 12px;
+    }
+
+    .is-invalid {
+        border-color: red;
+    }
+</style>
+
+<div class="alert alert-info">
+    <strong>How to Enter Transition Expressions:</strong>
+    <ul>
+        <li><strong>Placeholder Format:</strong> Use square brackets for column names, e.g., <code>[ColumnName]</code>.</li>
+        <li><strong>Mathematical Expressions:</strong> Perform calculations like <code>[Price] + 30</code>.</li>
+        <li><strong>String Concatenation:</strong> Combine text and values like <code>[Name] + ' Extra'</code>.</li>
+        <li><strong>Substrings:</strong> Evaluates to: First 4 characters of the Name column., e.g., <code>SUBSTRING([Name], 0, 4)</code>.</li>
+    </ul>
+</div>
+
+@if (Model.Properties != null && Model.Properties.Any())
+{
+    <form id="transitionForm">
+        <input type="button" class="btn btn-primary displayData-btn" value="Preview of uploaded file" style="margin-bottom:20px"/>
+       @*  <div id="partialViewContainer"></div> *@
+        <div id="filePreviewModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" style="max-width: 80%; /* Adjust the width as needed */">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">File Preview</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Partial view content will be injected here -->
+                        <div id="partialViewContainer"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+            <!-- Header Row -->
+            <div class="header-row">
+                <label class="header-label">Properties</label>
+                <label class="header-label-select">Header</label>
+                <label class="header-label-input">Transition Expression</label>
+            </div>
+
+            @foreach (var property in Model.Properties)
+            {
+                <div class="property-row">
+                    <!-- Property Name -->
+                    <label class="property-label">@property</label>
+
+                    <!-- CSV Header Selection with default selection -->
+                    <select class="form-control property-select">
+                        <option value="">Select CSV Header</option>
+                        @if (Model.Headers != null)
+                        {
+                            foreach (var header in Model.Headers)
+                            {
+                                if (header == property)
+                                {
+                                    <option value="@header" selected="selected">@header</option>
+                                }
+                                else
+                                {
+                                    <option value="@header">@header</option>
+                                }
+                            }
+                        }
+                    </select>
+
+                    <!-- Transition Value Input -->
+                    <input type="text" class="form-control property-input transition-rule-value" placeholder="Enter Transition Expression" />
+
+                    
+
+                    <input type="hidden" id="filePath" value="@Model.FileProcessingMessage.FilePath" />
+                    <input type="hidden" id="modelType" value="@Model.FileProcessingMessage.ModelType" />
+                    <input type="hidden" id="fileType" value="@Model.FileProcessingMessage.FileType" />
+                    <input type="hidden" id="locationType" value="@Model.FileProcessingMessage.LocationType" />
+                    <input type="hidden" id="locationConfig" value="@Model.FileProcessingMessage.LocationConfig" />
+                    <input type="hidden" id="serverAddress" value="@Model.FileProcessingMessage.LocationConfig?.ServerAddress" />
+                    <input type="hidden" id="username" value="@Model.FileProcessingMessage.LocationConfig?.Username" />
+                    <input type="hidden" id="password" value="@Model.FileProcessingMessage.LocationConfig?.Password" />
+                    <input type="hidden" id="apiEndpoint" value="@Model.FileProcessingMessage.LocationConfig?.ApiEndpoint" />
+                    <input type="hidden" id="apiKey" value="@Model.FileProcessingMessage.LocationConfig?.ApiKey" />
+                    <input type="hidden" id="connectionString" value="@Model.FileProcessingMessage.LocationConfig?.ConnectionString" />
+                    <input type="hidden" id="containerName" value="@Model.FileProcessingMessage.LocationConfig?.ContainerName" />
+                    @* <span class="preview-result" style="margin-left: 10px;"></span> *@
+                </div>
+            }
+        </div>
+    </form>
+}
+else
+{
+    <div class="alert alert-warning">No properties available.</div>
+}
+
+<script>
+    document.querySelectorAll('.transition-rule-value').forEach(input => {
+        input.addEventListener('input', function () {
+            const value = this.value.trim();
+            const regex = /^(\[.*?\]|\w+\(.*?\)|"[^"]*"|\d+)(\s*[\+\-\*/]\s*(\[.*?\]|\w+\(.*?\)|"[^"]*"|\d+))*$/;
+
+            // Locate the preview button in the same row
+            const previewButton = this.closest('.property-row').querySelector('.preview-btn');
+
+            if (!value) { // Check if the value is empty
+                this.classList.remove('is-invalid'); // Remove invalid class for empty value
+                previewButton.disabled = true; // Disable preview button
+            } else if (!regex.test(value)) { // Validate input
+                this.classList.add('is-invalid'); // Add invalid class for invalid input
+                previewButton.disabled = true; // Disable preview button
+            } else {
+                this.classList.remove('is-invalid'); // Remove invalid class for valid input
+                previewButton.disabled = false; // Enable preview button
+            }
+        });
+
+        // Trigger validation on page load in case of pre-filled values
+        input.dispatchEvent(new Event('input'));
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".displayData-btn").click(function () {
+            var $thisRow = $(this).closest('.property-row');
+            var filePath = $("#filePath").val();
+            var modelType = $("#modelType").val();
+            var fileType = $("#fileType").val();
+            var locationType = $("#locationType").val();
+            var locationConfig = {
+                ServerAddress: $("#serverAddress").val(),
+                Username: $("#username").val(),
+                Password: $("#password").val(),
+                ApiEndpoint: $("#apiEndpoint").val(),
+                ApiKey: $("#apiKey").val(),
+                ConnectionString: $("#connectionString").val(),
+                ContainerName: $("#containerName").val()
+            };
+
+            console.log(locationConfig);
+
+            // Send the data to the controller via AJAX
+            $.ajax({
+                url: '/FileProcessing/DisplayFile', // Controller action to process and return the partial view
+                type: 'POST',
+                data: {
+                    filePath: filePath,
+                    modelType: modelType,
+                    fileType: fileType,
+                    locationType: locationType,
+                    locationConfig: locationConfig
+                },
+                success: function (response) {
+                    // Inject the returned HTML (partial view) into the container
+                    $('#partialViewContainer').html(response);
+                    // Show the modal
+                    $('#filePreviewModal').modal('show');
+                },
+                error: function (xhr, status, error) {
+                    alert('Error: ' + error);
+                }
+            });
+        });
+    });
+</script>

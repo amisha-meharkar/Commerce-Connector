@@ -1,0 +1,149 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="job-scheduler-container">
+    <h2>Job Scheduling</h2>
+    <p>
+        Use this form to schedule jobs for execution:
+    </p>
+    <ul>
+        <li>
+            <strong>One Time Job:</strong> Enter the datetime in the format <code>yyyy-MM-ddTHH:mm</code>. Example: <code>2024-12-05T11:30</code>.
+        </li>
+        <li>
+            <strong>Recurring Job:</strong> Provide a valid <em>Cron Expression</em> to define a recurring schedule.
+            A Cron Expression is a string consisting of six fields (seconds, minutes, hours, day of month, month, day of week) separated by spaces.
+            For example: <code>0 0 * * *</code> runs the job daily at midnight.
+            <a href="https://crontab.guru/" target="_blank" rel="noopener">Learn more about Cron Expressions</a>.
+        </li>
+    </ul>
+
+    <label for="jobSchedule">Job Schedule</label>
+    <select id="jobSchedule">
+        <option value="" disabled selected>Select Job Type</option>
+        <option value="oneTime">One Time</option>
+        <option value="recurring">Recurring</option>
+    </select>
+
+    <div id="jobTimeDiv" style="display: none;">
+        <label for="jobTime">Job Time</label>
+        <input type="text" id="jobTime" placeholder="Enter time in yyyy-MM-ddTHH:mm format" />
+    </div>
+
+    <div id="cronExpressionDiv" style="display: none;">
+        <label for="cronExpression">Cron Expression</label>
+        <input type="text" id="cronExpression" placeholder="Enter Cron Expression" />
+    </div>
+
+    <button id="jobScheduleButton">Submit</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $('#jobSchedule').on('change', function () {
+        var selectedValue = $(this).val();
+        if (selectedValue === "oneTime") {
+            $('#jobTimeDiv').show();
+            $('#cronExpressionDiv').hide();
+        } else if (selectedValue === "recurring") {
+            $('#cronExpressionDiv').show();
+            $('#jobTimeDiv').hide();
+        }
+    });
+
+    $('#jobScheduleButton').on('click', function () {
+        const jobSchedule = $('#jobSchedule').val();
+        const jobTime = $('#jobTime').val();
+        const cronExpression = $('#cronExpression').val();
+
+        $.ajax({
+            url: '/FileProcessing/Schedule',
+            method: 'POST',
+            data: {
+                jobSchedule: jobSchedule,
+                jobTime: jobTime,
+                cronExpression: cronExpression
+            },
+            success: function (response) {
+                alert(response);
+            },
+            error: function () {
+                alert('Error scheduling job.');
+            }
+        });
+    });
+</script>
+
+<style>
+    /* Scoped styles for job scheduler view */
+    .job-scheduler-container {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+    }
+
+        .job-scheduler-container h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .job-scheduler-container p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .job-scheduler-container ul {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #333;
+            padding-left: 20px;
+        }
+
+            .job-scheduler-container ul li {
+                margin-bottom: 10px;
+            }
+
+        .job-scheduler-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .job-scheduler-container select,
+        .job-scheduler-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .job-scheduler-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .job-scheduler-container button:hover {
+                background-color: #0056b3;
+            }
+
+        .job-scheduler-container div {
+            margin-bottom: 16px;
+        }
+</style>

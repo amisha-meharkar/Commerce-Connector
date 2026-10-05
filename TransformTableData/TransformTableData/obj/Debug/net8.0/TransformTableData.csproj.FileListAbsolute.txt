@@ -1,0 +1,11 @@
+D:\TransformTableData\TransformTableData\TransformTableData\bin\Debug\net8.0\TransformTableData.deps.json
+D:\TransformTableData\TransformTableData\TransformTableData\bin\Debug\net8.0\TransformTableData.dll
+D:\TransformTableData\TransformTableData\TransformTableData\bin\Debug\net8.0\TransformTableData.pdb
+D:\TransformTableData\TransformTableData\TransformTableData\obj\Debug\net8.0\TransformTableData.GeneratedMSBuildEditorConfig.editorconfig
+D:\TransformTableData\TransformTableData\TransformTableData\obj\Debug\net8.0\TransformTableData.AssemblyInfoInputs.cache
+D:\TransformTableData\TransformTableData\TransformTableData\obj\Debug\net8.0\TransformTableData.AssemblyInfo.cs
+D:\TransformTableData\TransformTableData\TransformTableData\obj\Debug\net8.0\TransformTableData.csproj.CoreCompileInputs.cache
+D:\TransformTableData\TransformTableData\TransformTableData\obj\Debug\net8.0\TransformTableData.dll
+D:\TransformTableData\TransformTableData\TransformTableData\obj\Debug\net8.0\refint\TransformTableData.dll
+D:\TransformTableData\TransformTableData\TransformTableData\obj\Debug\net8.0\TransformTableData.pdb
+D:\TransformTableData\TransformTableData\TransformTableData\obj\Debug\net8.0\ref\TransformTableData.dll
